@@ -1,1 +1,33 @@
-<p>formulario works!</p>
+<div class="container">
+    <form [formGroup]="formPost">
+        <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input type="text" class="form-control" formControlName="titulo">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Texto</label>
+            <input type="text" class="form-control" formControlName="texto">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input type="text" class="form-control" formControlName="autor">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Imagen</label>
+            <input type="text" class="form-control" formControlName="imagen">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Categoría</label>
+            <select class="form-select" formControlName="categoria">
+                <option value="">Lovecraft y Otros Autores</option>
+                <option value="">Literatura de los Mitos</option>
+                <option value="">Dioses Exteriores</option>
+                <option value="">Dioses Primigenios</option>
+                <option value="">Dioses Arquetípicos</option>
+                <option value="">Criaturas de los Mitos</option>
+                <option value="">Personajes Destacados</option>
+
+            </select>
+        </div>
+    </form>
+</div>

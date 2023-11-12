@@ -1,1 +1,16 @@
-<p>lista-posts works!</p>
+<section>
+    <div></div>
+    <h2>Dreams from R'lyeh</h2>
+    <h4>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn</h4>
+    <h4>En su casa en R'lyeh, el muerto Cthulhu espera soñando</h4>
+    <div></div>
+    <article *ngFor="let post of posts">
+        <h3>{{post.titulo}}</h3>
+        <p>{{post.texto}}</p>
+        <p>Autor:{{post.autor}}</p>
+        <p>{{post.imagen}}</p>
+        <p>{{post.fecha}}</p>
+        <p>Categoría:{{post.categoria}}</p>
+
+    </article>
+</section>
