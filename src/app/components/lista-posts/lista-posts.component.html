@@ -7,6 +7,13 @@
         <h4>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn</h4>
         <h4>En su casa en R'lyeh, el muerto Cthulhu espera soñando</h4>
     </div>
+    <div>
+        <label class="form-label">Seleccionar una Categoría</label>
+        <select class="form-select" (change)="OnChangeCategory($event)">
+            <option value="Todos">Todos</option>
+            <option *ngFor="let categoria of arrCategorias" [value]="categoria">{{categoria}}</option>
+        </select>
+    </div>
     <article *ngFor="let post of posts">
         <h3>{{post.titulo}}</h3>
         <p>{{post.texto}}</p>

@@ -10,6 +10,17 @@ import { PostService } from 'src/app/services/post.service';
 export class ListaPostsComponent {
 
   posts: IPost[] = [];
+  arrCategorias: string[] = [
+    'Lovecraft y Otros Autores',
+    'Literatura de los Mitos',
+    'Dioses Exteriores',
+    'Dioses Primigenios',
+    'Dioses Arquetípicos',
+    'Criaturas de los Mitos',
+    'Personajes Destacados'
+  ];
+
+
 
 
   postService = inject(PostService);
@@ -18,6 +29,19 @@ export class ListaPostsComponent {
   ngOnInit() {
     this.posts = this.postService.getAllPosts();
 
+
   }
+
+  OnChangeCategory($event: any) {
+    if ($event.target.value === 'Todos') {
+      this.posts = this.postService.getAllPosts();
+    } else {
+      this.posts = this.postService.getByCategoria($event.target.value);
+    }
+
+  }
+
+
+
 
 }
