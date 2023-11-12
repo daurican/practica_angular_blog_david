@@ -6,24 +6,13 @@ import { IPost } from '../interfaces/ipost.interface';
 })
 export class PostService {
 
-  private arrPosts: IPost[];
+  arrPosts: IPost[] = [];
 
-
-  constructor() {
-    this.arrPosts = [
-      {
-        titulo: '',
-        texto: '',
-        autor: '',
-        imagen: '',
-        fecha: new Date(),
-        categoria: ''
-      }
-    ]
-  }
 
   createPost(post: IPost) {
     this.arrPosts.push(post);
+
+
   }
 
   getAllPosts(): IPost[] {
