@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0.625rem;
+}
+
+
+.oculto {
+    display: none;
+}
+
+.principal {
+    background-color: lightskyblue;
+
+}
+
+.principal>div:first-child {
+
+    text-align: center;
+    color: goldenrod;
+    padding: 0.3125rem;
+
+}
+
+.principal>div:first-child button {
+    background-color: blue;
+    color: goldenrod;
+    font-weight: bold;
+    padding: 0.625rem 1.25rem;
+    border: 0.1875rem solid green;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.cabecera {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a4167ad9-01ef-415e-a402-ec19c7202cab/dfs3tfs-b17ceea7-ecc4-4906-87b7-b2b115c11a13.png/v1/fill/w_1280,h_739,q_80,strp/_ph_nglui_mglw_nafh_cthulhu_r_lyeh_wgah_nagl_fhtag_by_minderuption_dfs3tfs-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzM5IiwicGF0aCI6IlwvZlwvYTQxNjdhZDktMDFlZi00MTVlLWE0MDItZWMxOWM3MjAyY2FiXC9kZnMzdGZzLWIxN2NlZWE3LWVjYzQtNDkwNi04N2I3LWIyYjExNWMxMWExMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.fw00jlyqyn4nx2YNZ10_pfIZArhQd4cQJIPyMJ8DHzM);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.principal .cabecera h2,
+h4 {
+    font-weight: bold;
+}
+
+.principal .categoria {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.principal div label {
+    background-color: blue;
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.principal div select {
+    background-color: black;
+    color: green;
+    font-weight: bold;
+}
+
+section article {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border: 0.125rem solid goldenrod;
+    margin: 1.25rem;
+    background-color: blue;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+section article h3 {
+    text-align: center;
+    padding: 0.625rem;
+    font-weight: bold;
+    color: goldenrod;
+
+}
+
+section article p {
+    color: antiquewhite;
+    margin: 0.625rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
+
+}
+
+
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}

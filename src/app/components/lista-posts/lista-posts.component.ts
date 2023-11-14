@@ -25,6 +25,8 @@ export class ListaPostsComponent {
 
   postService = inject(PostService);
 
+  mostrarTraducido = false;
+
 
   ngOnInit() {
     this.posts = this.postService.getAllPosts();
@@ -42,6 +44,8 @@ export class ListaPostsComponent {
   }
 
 
-
+  onClickMostrar() {
+    this.mostrarTraducido = !this.mostrarTraducido;
+  }
 
 }

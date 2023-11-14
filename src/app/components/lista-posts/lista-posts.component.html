@@ -1,26 +1,34 @@
-<section>
+<section class="principal">
     <div>
-        <button class="btn btn-primary" [routerLink]="['/new']">Crear Post</button>
+        <button [routerLink]="['/new']">Crear Post</button>
     </div>
-    <div>
+    <div class="cabecera">
         <h2>Dreams from R'lyeh</h2>
-        <h4>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn</h4>
-        <h4>En su casa en R'lyeh, el muerto Cthulhu espera soñando</h4>
+        <h4 [class.oculto]="mostrarTraducido">Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl
+            fhtagn</h4>
+        <h4 [class.oculto]="!mostrarTraducido">En su morada de R'lyeh, el muerto Cthulhu
+            espera soñando</h4>
+        <button class="btn" (click)="onClickMostrar()">
+            {{ mostrarTraducido ? '🧿' : '🕯️' }}
+        </button>
+
     </div>
-    <div>
+    <div class="categoria">
         <label class="form-label">Seleccionar una Categoría</label>
         <select class="form-select" (change)="OnChangeCategory($event)">
             <option value="Todos">Todos</option>
             <option *ngFor="let categoria of arrCategorias" [value]="categoria">{{categoria}}</option>
         </select>
     </div>
-    <article *ngFor="let post of posts">
-        <h3>{{post.titulo}}</h3>
-        <p>{{post.texto}}</p>
-        <p>Autor: {{post.autor}}</p>
-        <p><img [src]="post.imagen"></p>
-        <p>Fecha: {{post.fecha | date: 'dd/MM/yyyy'}}</p>
-        <p>Categoría: {{post.categoria}}</p>
+    <div class="flex">
+        <article *ngFor="let post of posts">
+            <h3>{{post.titulo}}</h3>
+            <p>{{post.texto}}</p>
+            <p>Autor: {{post.autor}}</p>
+            <p><img [src]="post.imagen"></p>
+            <p>Fecha: {{post.fecha | date: 'dd/MM/yyyy'}}</p>
+            <p>Categoría: {{post.categoria}}</p>
+        </article>
+    </div>
 
-    </article>
 </section>
